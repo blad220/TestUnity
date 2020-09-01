@@ -27,7 +27,13 @@ public class ScEnemy : MonoBehaviour
     public void Damage(float numb) {
         health -= numb;
 
-        if (health < 0f) Destroy(gameObject);        
+        if (health < 0f) {
+            Destroy(gameObject);
+            for(int i = 0; i< gameObject.GetComponent<ScShooting>().instances.Length; i++)
+            {
+                Destroy(gameObject.GetComponent<ScShooting>().instances[i]);
+            }
+        }
 
         float dmgScaleX = minScaleX + ( (health/maxhealth) * ((maxScaleX - minScaleX)) ); //1..0.37
         float dmgScaleY = minScaleY + ( (health/maxhealth) * ((maxScaleY - minScaleY)) ); //1..0.37

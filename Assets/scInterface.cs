@@ -16,9 +16,9 @@ public class scInterface : MonoBehaviour
     }
     void ResetGame()
     {
-        SceneManager.LoadScene("SampleScene");
         yourButton.SetActive(false);
         Time.timeScale = 1f;
+        SceneManager.LoadScene("SampleScene");
     }
     // Update is called once per frame
     void Update()

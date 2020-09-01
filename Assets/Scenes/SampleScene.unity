@@ -834,6 +834,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3096648046979627678, guid: 924f996a8c50cf04fb43e8ee0ab26998,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 6438245743616128366, guid: 990130834db21fe4699ac05858b8a168,
+        type: 3}
+    - target: {fileID: 3096648046979627678, guid: 924f996a8c50cf04fb43e8ee0ab26998,
+        type: 3}
+      propertyPath: maximumBulletCount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096648046979627678, guid: 924f996a8c50cf04fb43e8ee0ab26998,
+        type: 3}
+      propertyPath: shootingTimeReload
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3096648046979627679, guid: 924f996a8c50cf04fb43e8ee0ab26998,
         type: 3}
       propertyPath: restrictions

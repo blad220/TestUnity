@@ -246,12 +246,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e3bf412e4b85434d941b4fb11613dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1787536604074444782, guid: 990130834db21fe4699ac05858b8a168, type: 3}
+  bullet: {fileID: 6438245743616128366, guid: 990130834db21fe4699ac05858b8a168, type: 3}
   gunPoint: {fileID: 3096648046967822352}
   isShootingIntoPlayer: 0
   isAutoShoot: 0
   bulletSpeed: 10
-  timeout: 0.3
+  shootingTimeReload: 0.5
+  maximumBulletCount: 4
+  instances: []
 --- !u!114 &3096648046979627665
 MonoBehaviour:
   m_ObjectHideFlags: 0

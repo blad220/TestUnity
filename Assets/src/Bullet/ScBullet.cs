@@ -15,10 +15,14 @@ public class ScBullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		curTimeout += Time.deltaTime;
-		if (curTimeout > timeout) {
-			Destroy(gameObject);
-		}
+        curTimeout += Time.deltaTime;
+        if (curTimeout > timeout)
+        {
+            // Destroy(gameObject);
+            gameObject.SetActive(false);
+            gameObject.transform.position = ScShooting.stackPosition;
+            curTimeout = 0f;
+        }
     }
     public float damage = 10f;
     public string targetTag = "enemy";
@@ -31,7 +35,8 @@ public class ScBullet : MonoBehaviour
         {
             coll.transform.GetComponent<ScEnemy>().Damage(damage);
             // Debug.Log("Enemy Shoot");
-        	Destroy(gameObject);
+            gameObject.SetActive(false);
+            gameObject.transform.position = ScShooting.stackPosition;
         }
 		
 

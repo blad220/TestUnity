@@ -18,7 +18,10 @@ public class ScBulletEnemy : MonoBehaviour
         curTimeout += Time.deltaTime;
         if (curTimeout > timeout)
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            gameObject.SetActive(false);
+            gameObject.transform.position = ScShooting.stackPosition;
+            curTimeout = 0f;
         }
     }
 
@@ -32,7 +35,9 @@ public class ScBulletEnemy : MonoBehaviour
         {
             coll.transform.GetComponent<ScPlayer>().Damage(damage);
             // Debug.Log("Enemy Shoot2");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+            gameObject.transform.position = ScShooting.stackPosition;
         }
 
 
